@@ -4,6 +4,13 @@
   "y": 0,
   "uniqueID": "id-9970",
   "name": "14-20_Hex-Bolt",
+  "ioValues": [
+    {
+      "name": "length",
+      "ioValue": 0.75,
+      "currentEquation": "3/4"
+    }
+  ],
   "topLevel": true,
   "allAtoms": [
     {
@@ -17,9 +24,169 @@
           "ioValue": "__GEOMETRY_INPUT__"
         }
       ]
+    },
+    {
+      "atomType": "RegularPolygon",
+      "x": 0.2,
+      "y": 0.5,
+      "uniqueID": "id-9973",
+      "ioValues": [
+        {
+          "name": "number of sides",
+          "ioValue": 6
+        },
+        {
+          "name": "diameter",
+          "ioValue": 0.438,
+          "currentEquation": ".438"
+        }
+      ]
+    },
+    {
+      "atomType": "Extrude",
+      "x": 0.5,
+      "y": 0.4,
+      "uniqueID": "id-9977",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "height",
+          "ioValue": 0.163,
+          "currentEquation": ".163"
+        }
+      ]
+    },
+    {
+      "atomType": "Circle",
+      "x": 0.3,
+      "y": 0.8,
+      "uniqueID": "id-9981",
+      "ioValues": [
+        {
+          "name": "diameter",
+          "ioValue": 0.25,
+          "currentEquation": ".25"
+        }
+      ]
+    },
+    {
+      "atomType": "Extrude",
+      "x": 0.4,
+      "y": 0.7,
+      "uniqueID": "id-9984",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "height",
+          "ioValue": -0.75,
+          "currentEquation": "-length"
+        }
+      ]
+    },
+    {
+      "atomType": "Input",
+      "x": 0,
+      "y": 0.5,
+      "uniqueID": "id-9988",
+      "name": "length"
+    },
+    {
+      "atomType": "Fusion",
+      "x": 0.6,
+      "y": 0.6,
+      "uniqueID": "id-9991",
+      "ioValues": [
+        {
+          "name": "Shape 1",
+          "ioValue": {
+            "geometry": "extrude-polysides-0.219-6-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-0.163",
+            "dimension": "3D",
+            "tags": [],
+            "plane": {
+              "origin": [
+                0,
+                0,
+                0
+              ],
+              "xDir": [
+                1,
+                0,
+                0
+              ],
+              "normal": [
+                0,
+                0,
+                1
+              ]
+            },
+            "color": "#aad7f2",
+            "bom": []
+          }
+        },
+        {
+          "name": "Shape 2",
+          "ioValue": {
+            "geometry": "extrude-circle-0.125-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}--0.75",
+            "dimension": "3D",
+            "tags": [],
+            "plane": {
+              "origin": [
+                0,
+                0,
+                0
+              ],
+              "xDir": [
+                1,
+                0,
+                0
+              ],
+              "normal": [
+                0,
+                0,
+                1
+              ]
+            },
+            "color": "#aad7f2",
+            "bom": []
+          }
+        }
+      ],
+      "unionType": "Fusion"
     }
   ],
-  "allConnectors": [],
+  "allConnectors": [
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-9973",
+      "ap2ID": "id-9977"
+    },
+    {
+      "ap2Name": "Shape 1",
+      "ap1ID": "id-9977",
+      "ap2ID": "id-9991"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-9981",
+      "ap2ID": "id-9984"
+    },
+    {
+      "ap2Name": "Shape 2",
+      "ap1ID": "id-9984",
+      "ap2ID": "id-9991"
+    },
+    {
+      "ap2Name": "number or geometry",
+      "ap1ID": "id-9991",
+      "ap2ID": "id-9971"
+    }
+  ],
   "unitsKey": "MM",
   "fileTypeVersion": 1,
   "filetypeVersion": 1
