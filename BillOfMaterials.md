@@ -2,4 +2,5 @@
 # Bill Of Materials 
  |Part|Number Needed|Price|Source| 
  |----|----------|-----|-----|
-|Total: |0|$0.00| |
+|New Item|1|$0.00|https://www.mcmaster.com/products/bolts/thread-size~1-4-20/hex-head-screws-1~/steel-hex-head-screws~~/|
+|Total: |1|$0.00| |
