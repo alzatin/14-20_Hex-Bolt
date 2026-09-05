@@ -162,7 +162,7 @@
     {
       "atomType": "Add-BOM-Tag",
       "x": 0.8,
-      "y": 0.7,
+      "y": 0.5,
       "uniqueID": "id-9997",
       "name": "Add BOM Tag",
       "ioValues": [
@@ -181,7 +181,7 @@
         },
         {
           "name": "Cost (USD)",
-          "ioValue": 0.25
+          "ioValue": 0
         },
         {
           "name": "Source Link",
@@ -192,7 +192,7 @@
       "BOMitem": {
         "BOMitemName": "New Item",
         "numberNeeded": 1,
-        "costUSD": 0.25,
+        "costUSD": 0,
         "source": "https://www.mcmaster.com/products/bolts/thread-size~1-4-20/hex-head-screws-1~/steel-hex-head-screws~~/"
       }
     }
@@ -219,14 +219,14 @@
       "ap2ID": "id-9991"
     },
     {
-      "ap2Name": "number or geometry",
-      "ap1ID": "id-9991",
-      "ap2ID": "id-9971"
-    },
-    {
       "ap2Name": "geometry",
       "ap1ID": "id-9991",
       "ap2ID": "id-9997"
+    },
+    {
+      "ap2Name": "number or geometry",
+      "ap1ID": "id-9997",
+      "ap2ID": "id-9971"
     }
   ],
   "unitsKey": "MM",
